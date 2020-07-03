@@ -4,14 +4,14 @@ console.log('Wylosowana liczba to: ' + randomNumber);
 
 let computerMove = 'nieznany ruch';
 
-if(randomNumber == 1){
+if (randomNumber == 1) {
   computerMove = 'kamień';
 }
-else if (randomNumber ==2){
-    computerMove = 'papier';
+else if (randomNumber == 2) {
+  computerMove = 'papier';
 }
-else if (randomNumber ==3){
-    computerMove = 'nożyce';
+else if (randomNumber == 3) {
+  computerMove = 'nożyce';
 }
 
 printMessage('Mój ruch to: ' + computerMove);
@@ -22,24 +22,30 @@ console.log('Gracz wpisał: ' + playerInput);
 
 let playerMove = 'nieznany ruch';
 
-if(playerInput == '1'){
+if (playerInput == '1') {
   playerMove = 'kamień';
-} else if(playerInput == '2'){
-    playerMove = 'papier';
-  } else if(playerInput == '3'){
-    playerMove = 'nożyce';
-  } else if(playerInput !== '1,2,3'){
-    playerMove = 'nieznany ruch. Wpisz 1 lub 2 lub 3';
+} else if (playerInput == '2') {
+  playerMove = 'papier';
+} else if (playerInput == '3') {
+  playerMove = 'nożyce';
+} else if (playerInput !== '1') {
+  playerMove = 'nieznany ruch. Wpisz 1 lub 2 lub 3';
+} else if (playerInput !== '2') {
+  playerMove = 'nieznany ruch. Wpisz 1 lub 2 lub 3';
+} else if (playerInput !== '3') {
+  playerMove = 'nieznany ruch. Wpisz 1 lub 2 lub 3';
 }
 
 printMessage('Twój ruch to: ' + playerMove);
 
-if(computerMove == 'papier' && playerMove == 'kamień'){
-    printMessage('Ja wygrywam!');
-  }else if (computerMove == 'kamień' && playerMove == 'nożyce'){
-    printMessage('Ja wygrywam!');
-  }else if (computerMove == 'nożyce' && playerMove == 'papier'){
-    printMessage('Ja wygrywam!');
-  }else if (computerMove ==  playerMove) {printMessage('Remis');
-}else {PrintMessage ('Ty wygrywasz');
+if (computerMove == 'papier' && playerMove == 'kamień') {
+  printMessage('Ja wygrywam!');
+} else if (computerMove == 'kamień' && playerMove == 'nożyce') {
+  printMessage('Ja wygrywam!');
+} else if (computerMove == 'nożyce' && playerMove == 'papier') {
+  printMessage('Ja wygrywam!');
+} else if (computerMove == playerMove) {
+  printMessage('Remis');
+} else {
+  printMessage('Ty wygrywasz');
 }
