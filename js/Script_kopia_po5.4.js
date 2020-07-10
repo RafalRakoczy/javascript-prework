@@ -28,7 +28,7 @@ if (playerInput == '1') {
   playerMove = 'papier';
 } else if (playerInput == '3') {
   playerMove = 'nożyce';
-} else if (playerInput !== "1" || "2" || "3") {
+} else (playerInput !== "1" || "2" || "3") {
   playerMove = 'nieznany ruch';
 }
 
@@ -45,3 +45,4 @@ if (computerMove == 'papier' && playerMove == 'kamień') {
 } else if (playerMove == 'nieznany ruch') {
   printMessage('nie wpisałeś prawidłowo numeru! Spróbuj od nowa.');
 } else printMessage('Ty wygrywasz!')
+}
