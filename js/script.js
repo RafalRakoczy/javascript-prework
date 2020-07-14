@@ -17,9 +17,10 @@ function getMoveName(ArgmoveId) {
 
   let computerMove = getMoveName(randomNumber);
   console.log('ruch komputera to: ' + computerMove);
-  console.log('Gracz wpisał: ' + ArgplayerInput);
+ 
 
   let playerMove = getMoveName(ArgplayerInput);
+  console.log('Gracz wtbrał: ' + ArgplayerInput);
   console.log('ruch gracza to: ' + playerMove);
 
 function displayResult(computerMove, playerMove) {
