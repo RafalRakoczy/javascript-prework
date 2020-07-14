@@ -24,7 +24,7 @@ function getMoveName(MoveId) {
   
   function displayResult(ComputerMove, PlayerMove) {
     printMessage('Zagrałem ' + ComputerMove + ', a Ty ' + PlayerMove);
-  } if (ComputerMove == 'papier' && PlayerMove == 'kamień') {
+  if (ComputerMove == 'papier' && PlayerMove == 'kamień') {
     printMessage('Ja wygrywam!');
   } else if (ComputerMove == 'kamień' && PlayerMove == 'nożyce') {
     printMessage('Ja wygrywam!');
@@ -36,3 +36,4 @@ function getMoveName(MoveId) {
     printMessage('nie wpisałeś prawidłowo numeru! Spróbuj od nowa.');
   } else printMessage('Ty wygrywasz!');
   displayResult(ComputerMove, PlayerMove);
+}
