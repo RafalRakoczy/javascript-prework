@@ -42,22 +42,14 @@ function displayResult(computerMove, playerMove) {
   printMessage(displayResult(computerMove, playerMove));
 }
   document.getElementById('play-rock').addEventListener('click', function() {
-  printMessage('Guzik został kliknięty')(playGame(1));
+  printMessage('Guzik został kliknięty');
+  playGame(1);
   });
   document.getElementById('play-paper').addEventListener('click', function() {
-  printMessage('kliknąłeś guzik Papier')(playGame(2));
+  printMessage('kliknąłeś guzik Papier');
+  playGame(2);
   });
   document.getElementById('play-scissors').addEventListener('click', function() {
-  printMessage('kliknąłeś guzik Nożyce')(playGame(3));
+  printMessage('kliknąłeś guzik Nożyce');
+  playGame(3);
   });
-  
-  /*
-  document.getElementById('play-rock').addEventListener('click', function() {
-  (playGame(1))('Kliknąłeś guzik Kamień');
-  });
-  document.getElementById('play-paper').addEventListener('click', function() {
-  playGame(2)('kliknąłeś guzik Papier');
-  });
-  document.getElementById('play-scissors').addEventListener('click', function() {
-  playGame(3)('kliknąłeś guzik Nożyce');
-  });*/
