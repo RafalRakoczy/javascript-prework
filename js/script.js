@@ -1,13 +1,13 @@
-function playGame(playerInput) {
+function playGame(ArgplayerInput) {
   clearMessages();
-function getMoveName(MoveId) {
-  if (MoveId == 1) {
+function getMoveName(ArgmoveId) {
+  if (ArgmoveId == 1) {
     return 'kamień';
-  } if (MoveId == 2) {
+  } if (ArgmoveId == 2) {
     return 'papier';
-  } if (MoveId == 3) {
+  } if (ArgmoveId == 3) {
     return 'nożyce';
-  } else printMessage('Nie znam ruchu o id ' + MoveId + '.');
+  } else printMessage('Nie znam ruchu o id ' + ArgmoveId + '.');
     return 'nieznany ruch';
   }
 
@@ -15,30 +15,30 @@ function getMoveName(MoveId) {
   let randomNumber = Math.floor(Math.random() * 3 + 1);
   console.log('Wylosowana liczba to: ' + randomNumber);
 
-  let ComputerMove = getMoveName(randomNumber);
-  console.log('ruch komputera to: ' + ComputerMove);
-  console.log('Gracz wpisał: ' + playerInput);
+  let computerMove = getMoveName(randomNumber);
+  console.log('ruch komputera to: ' + computerMove);
+  console.log('Gracz wpisał: ' + ArgplayerInput);
 
-  let PlayerMove = getMoveName(playerInput);
-  console.log('ruch gracza to: ' + PlayerMove);
+  let playerMove = getMoveName(ArgplayerInput);
+  console.log('ruch gracza to: ' + playerMove);
 
-function displayResult(ComputerMove, PlayerMove) {
-  printMessage('Zagrałem ' + ComputerMove + ', a Ty ' + PlayerMove);
-  if (ComputerMove == 'papier' && PlayerMove == 'kamień') {
+function displayResult(computerMove, playerMove) {
+  printMessage('Zagrałem ' + computerMove + ', a Ty ' + playerMove);
+  if (computerMove == 'papier' && playerMove == 'kamień') {
     printMessage('Ja wygrywam!');
-  } else if (ComputerMove == 'kamień' && PlayerMove == 'nożyce') {
+  } else if (computerMove == 'kamień' && playerMove == 'nożyce') {
     printMessage('Ja wygrywam!');
-  } else if (ComputerMove == 'nożyce' && PlayerMove == 'papier') {
+  } else if (computerMove == 'nożyce' && playerMove == 'papier') {
     printMessage('Ja wygrywam!');
-  } else if (ComputerMove == PlayerMove) {
+  } else if (computerMove == playerMove) {
     printMessage('Remis');
-  } else if (PlayerMove == 'nieznany ruch') {
+  } else if (playerMove == 'nieznany ruch') {
     printMessage('nieznany ruch');
   } else {
     printMessage('Ty wygrywasz!');
     }
   }
-  printMessage(displayResult(ComputerMove, PlayerMove));
+  printMessage(displayResult(computerMove, playerMove));
 }
   document.getElementById('play-rock').addEventListener('click', function() {
   printMessage('Guzik został kliknięty')(playGame(1));
