@@ -39,7 +39,7 @@ function displayResult(computerMove, playerMove) {
     printMessage('Ty wygrywasz!');
     }
   }
-  displayResult;
+  displayResult(computerMove, playerMove);
 }
   document.getElementById('play-rock').addEventListener('click', function() {
   printMessage('Guzik został kliknięty');
